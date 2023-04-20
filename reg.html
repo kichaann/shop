@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+</head>
+<body class="reg">
+<div id="app">
+    <div class="error" v-if=error>
+        {{error}}
+    </div>
+     <form action="#" method="post" v-on:submit.prevent="register">
+{{message}}
+
+        
+    <div class="v">
+        <a class="tologin" href="">Зарегистрироваться</a>
+        <svg width="1" height="44" viewBox="0 0 1 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0.5" y1="1.06197e-10" x2="0.5" y2="68" stroke="#EE964B"/>
+            </svg>
+            
+        <a class="login" href="login.html">Войти</a>
+    </div>    
+
+        <label for="">Имя</label>
+        <input type="text" name="name" id="name" placeholder="Введите ваше имя">
+        <label>Email</label>
+        <input v-model="email" type="email" name="email" id="email" placeholder="Введите ваш email">
+        <label for="">Телефон</label>
+        <input type="tel" name="tel" id="tel" placeholder="Введите ваш телефон">
+        <label>Пароль</label>
+        <input v-model="password" type="password" name="password" id="password" placeholder="Введите пароль">
+
+        <!-- <label class="cl-checkbox">
+            <input checked="" type="checkbox">
+            <span>Запомнить меня</span>
+        </label> -->
+
+
+        <input type="submit" value="Зарегистрироваться">
+        <div class="backfon" v-if="loading">
+            <div class="loader"></div> 
+        </div>
+        <div class="p">
+            <p>Зарегистрироваться через</p>
+            <img src="vk.png" alt="">
+            <img src="https://www.ph4.ru/DL/LOGO/g/gosuslugi____.gif" alt="">
+        </div>
+    </form>
+</div>
+
+   
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

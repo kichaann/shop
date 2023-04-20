@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body class="reg">
+    <div id="app">
+        <div class="error wow bounceInUp" v-if=error>
+            {{error}}
+        </div>
+        <form action="#" method="post" v-on:submit.prevent="login">
+            {{message}}
+
+            <div class="v">
+                <a class="tologin" href="reg.html">Зарегистрироваться</a>
+                <svg width="1" height="44" viewBox="0 0 1 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.5" y1="1.06197e-10" x2="0.5" y2="68" stroke="#EE964B" />
+                </svg>
+
+                <a class="login" href="login.html">Войти</a>
+            </div>
+
+            <label for="">Имя</label>
+            <input type="text" name="name" id="name" placeholder="Введите ваше имя">
+            <!-- <label>Email</label>
+        <input v-model="email" type="email" name="email" id="email" placeholder="Введите ваш email">
+        <label for="">Телефон</label>
+        <input type="tel" name="tel" id="tel" placeholder="Введите ваш телефон"> -->
+            <label>Пароль</label>
+            <input v-model="password" type="password" name="password" id="password" placeholder="Введите пароль">
+
+            <!-- <label class="cl-checkbox">
+            <input checked="" type="checkbox">
+            <span>Запомнить меня</span>
+        </label> -->
+            <div class="i"><a href="password.html">Забыли пароль?</a></div>
+
+            <input type="submit" value="Войти">
+            <div class="backfon" v-if="loading">
+                <div class="loader"></div>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
